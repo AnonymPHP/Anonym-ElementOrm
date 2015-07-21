@@ -1,0 +1,29 @@
+{
+  "name": "anonym-php/anonym-element-orm",
+  "type": "library",
+  "keywords": ["upload"],
+  "homepage": "https://gemframework.com",
+  "description": "AnonymFramework Database Element Orm",
+  "license": "MIT",
+  "repositories": [
+    {
+      "type": "git",
+      "url": "git://github.com/AnonymPHP/Anonym-ElementOrm.git"
+    }
+  ],
+  "minimum-stability": "stable",
+  "authors": [
+    {
+      "name": "Vahit Şerif Sağlam",
+      "email": "vahit.serif119@gmail.com",
+      "homepage": "http://www.gemframework.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "anonym-database":"dev-master"
+  },
+  "autoload": {
+    "psr-4": {"Anonym\\Components\\Element\\": "src/Anonym/Components/"}
+  }
+}
