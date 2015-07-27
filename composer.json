@@ -13,7 +13,7 @@
       "url": "git://github.com/AnonymPHP/Anonym-ElementOrm.git"
     }
   ],
-  "minimum-stability": "dev",
+  "minimum-stability" : "dev",
   "authors": [
     {
       "name": "Vahit Şerif Sağlam",
