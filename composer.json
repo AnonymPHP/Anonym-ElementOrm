@@ -7,12 +7,6 @@
   "homepage": "https://gemframework.com",
   "description": "AnonymFramework Database Element Orm",
   "license": "MIT",
-  "repositories": [
-    {
-      "type": "git",
-      "url": "git://github.com/AnonymPHP/Anonym-ElementOrm.git"
-    }
-  ],
   "minimum-stability" : "dev",
   "authors": [
     {
