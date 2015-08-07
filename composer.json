@@ -2,7 +2,7 @@
   "name": "anonym-php/anonym-element-orm",
   "type": "library",
   "keywords": [
-    "upload"
+    "element","orm"
   ],
   "homepage": "https://gemframework.com",
   "description": "AnonymFramework Database Element Orm",
@@ -15,7 +15,7 @@
       "homepage": "http://www.gemframework.com"
     }
   ],
-  "require": {
+  "require-dev": {
     "php": ">=5.4.0",
     "anonym-database": "dev-master"
   },
