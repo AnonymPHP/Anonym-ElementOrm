@@ -17,7 +17,7 @@
   ],
   "require": {
     "php": ">=5.4.0",
-    "anonym-php/anonym-database": "1.2"
+    "anonym-php/anonym-database": "dev-master"
   },
   "autoload": {
     "psr-4": {
