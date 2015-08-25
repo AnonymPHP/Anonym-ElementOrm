@@ -107,10 +107,11 @@
 
         /**
          * Sınıfı ve Ebeveyn sınıfı başlatır.
+         * @param Base $base the instance of database
          */
-        public function __construct()
+        public function __construct(Base $base)
         {
-            $this->db = new Base();
+            $this->db = $base;
         }
 
         /**
