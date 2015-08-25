@@ -106,6 +106,7 @@ class Element
     private $join;
 
     /**
+     *
      * Sınıfı ve Ebeveyn sınıfı başlatır.
      * @param Base $base the instance of database
      */
