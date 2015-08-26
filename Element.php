@@ -110,7 +110,7 @@ class Element
      * Sınıfı ve Ebeveyn sınıfı başlatır.
      * @param Base $base the instance of database
      */
-    public function __construct(Base $base)
+    public function __construct(Base $base = null)
     {
         $this->db = $base;
     }
