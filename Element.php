@@ -10,6 +10,7 @@ use Anonym\Components\Database\Mode\Delete;
 use Anonym\Components\Database\Mode\Read;
 use Anonym\Components\Database\Mode\Update;
 use Anonym\Components\Database\Mode\Insert;
+use Anonym\Components\Database\Mode\ModeManager;
 use Exception;
 use PDO;
 
@@ -266,7 +267,38 @@ class Element
         return $this;
     }
 
+    /**
+     * paginate the datas
+     *
+     * @param int $perPage
+     * @return \Anonym\Components\Database\Pagination\Paginator|bool
+     */
+    public function paginate($perPage = 15)
+    {
+        $builded = $this->buildBaseForRead();
 
+        if ($builded instanceof ModeManager) {
+            return $builded->pagination($perPage);
+        }else{
+            return false;
+        }
+    }
+    /**
+     * paginate the datas
+     *
+     * @param int $perPage
+     * @return \Anonym\Components\Database\Pagination\Paginator|bool
+     */
+    public function simplePaginate($perPage = 15)
+    {
+        $builded = $this->buildBaseForRead();
+
+        if ($builded instanceof ModeManager) {
+            return $builded->simplePagination($perPage);
+        }else{
+            return false;
+        }
+    }
     /**
      * Veriyi okur
      *
@@ -274,7 +306,7 @@ class Element
      */
     public function read()
     {
-´´
+
         $return = $this->buildBaseForRead()->build();
 
         return $return;
