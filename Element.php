@@ -274,6 +274,17 @@ class Element
      */
     public function read()
     {
+
+        $return $this->buildBaseForRead()->build();
+
+        return $return;
+    }
+
+
+    /**
+     *
+     */
+    private function buildBaseForRead(){
         $app = $this;
         $return = $app->db->read(
             $this->table,
@@ -303,13 +314,11 @@ class Element
                     $mode->orWhere($app->orWhere);
                 }
 
-                return $mode->build();
-            }
-        );
+                return $mode;
+            });
 
-        return $return;
+        return $return;´´
     }
-
     /**
      * Mysql üzerinde güncelleme işlemi yapar
      *
