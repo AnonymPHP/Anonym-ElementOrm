@@ -283,6 +283,7 @@ class Element
             return false;
         }
     }
+
     /**
      * paginate the datas
      *
