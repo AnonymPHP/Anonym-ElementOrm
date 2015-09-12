@@ -317,7 +317,7 @@ class Element
                 return $mode;
             });
 
-        return $return;´´
+        return $return;
     }
     /**
      * Mysql üzerinde güncelleme işlemi yapar
