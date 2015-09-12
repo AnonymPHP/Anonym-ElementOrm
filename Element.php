@@ -274,8 +274,8 @@ class Element
      */
     public function read()
     {
-
-        $return $this->buildBaseForRead()->build();
+´´
+        $return = $this->buildBaseForRead()->build();
 
         return $return;
     }
@@ -284,7 +284,8 @@ class Element
     /**
      *
      */
-    private function buildBaseForRead(){
+    private function buildBaseForRead()
+    {
         $app = $this;
         $return = $app->db->read(
             $this->table,
@@ -315,10 +316,12 @@ class Element
                 }
 
                 return $mode;
-            });
+            }
+        );
 
         return $return;
     }
+
     /**
      * Mysql üzerinde güncelleme işlemi yapar
      *
