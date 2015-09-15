@@ -316,6 +316,32 @@ class Element
         return $return;
     }
 
+    /**
+     * fetch mysql datas to object
+     *
+     * @return mixed
+     */
+    public function fetch(){
+        return $this->read()->fetch();
+    }
+
+    /**
+     * fetch mysql all datas to object
+     *
+     * @return mixed
+     */
+    public function fetchAll(){
+        return $this->read()->fetchAll();
+    }
+
+    /**
+     * run row count command
+     *
+     * @return mixed
+     */
+    public function rowCount(){
+        return $this->read()->rowCount();
+    }
 
     /**
      *
