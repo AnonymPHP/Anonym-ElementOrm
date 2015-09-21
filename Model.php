@@ -103,6 +103,17 @@ class Model
     }
 
     /**
+     * change called class
+     *
+     * @param stirng $table
+     * @return $this
+     */
+    public function table($table){
+        $this->setOrm($this->getBase()->setTable($table));
+        return $this;
+    }
+
+    /**
      * call method in orm if cant find in this class
      *
      * @param string $method
