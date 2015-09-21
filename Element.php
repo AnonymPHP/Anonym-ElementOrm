@@ -22,7 +22,6 @@ use PDO;
 class Element
 {
 
-    const TABLE_TAME = 'table';
 
     /**
      * Where sorgularını depolar
