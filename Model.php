@@ -22,15 +22,44 @@ class Model
     protected $base;
 
     /**
+     * the instance of orm
+     *
+     * @var Element
+     */
+    protected $orm;
+    /**
      *  create a new instance and register database instance
      */
     public function __construct(){
         $this->setBase(App::make('database.base'));
 
         $this->getBase()->setTable( $this->findConnectedTable());
+        $this->setOrm($this->getBase());
     }
 
+    /**
+     * @return Element
+     */
+    public function getOrm()
+    {
+        return $this->orm;
+    }
 
+    /**
+     * @param Element $orm
+     * @return Model
+     */
+    public function setOrm(Element $orm)
+    {
+        $this->orm = $orm;
+        return $this;
+    }
+
+    /**
+     * find user called table
+     *
+     * @return mixed
+     */
     private function findConnectedTable(){
         $vars = get_class_vars(self::class);
 
