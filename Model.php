@@ -34,7 +34,6 @@ class Model
     public function __construct(){
         $this->setBase(App::make('database.base'));
         $this->table($this->findConnectedTable());
-        $this->setOrm($this->getBase());
     }
 
     /**
@@ -109,7 +108,7 @@ class Model
      * @return $this
      */
     public function table($table){
-        $this->setOrm($this->getBase()->setTable($table));
+        $this->setOrm(new Element($this->getBase()->setConnectedTable($table)));
         return $this;
     }
 
