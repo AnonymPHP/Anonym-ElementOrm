@@ -111,6 +111,19 @@ class Model
      * @param array $args
      * @return mixed
      */
+    public static function __callStatic($method, $args){
+
+        $app = new static();
+
+        return call_user_func_array([$app->getOrm(), $method ], $args);
+    }
+    /**
+     * call method in orm if cant find in this class
+     *
+     * @param string $method
+     * @param array $args
+     * @return mixed
+     */
     public function __call($method, $args){
         return call_user_func_array([$this->getOrm(), $method ], $args);
     }
