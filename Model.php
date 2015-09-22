@@ -95,7 +95,12 @@ class Model
      * @return $this
      */
     public function table($table){
-        $this->setOrm(new Element($this->getBase()->setConnectedTable($table)));
+
+        $element = (new Element(
+            $this->getBase()->setConnectedTable($table)
+        ))->setTable($table);
+
+        $this->setOrm($element);
         return $this;
     }
 
