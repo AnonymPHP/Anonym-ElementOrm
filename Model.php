@@ -33,6 +33,7 @@ class Model
      */
     public function __construct(){
         $this->setBase(App::make('database.base'));
+        $this->setOrm($this->getBase());
         $this->table($this->findConnectedTable());
     }
 
@@ -89,22 +90,6 @@ class Model
     }
 
     /**
-     * change called class
-     *
-     * @param stirng $table
-     * @return $this
-     */
-    public function table($table){
-
-        $element = (new Element(
-            $this->getBase()->setConnectedTable($table)
-        ))->setTable($table);
-
-        $this->setOrm($element);
-        return $this;
-    }
-
-    /**
      * call method in orm if cant find in this class
      *
      * @param string $method
@@ -115,7 +100,7 @@ class Model
 
         $app = new static();
 
-        return call_user_func_array([$app, $method ], $args);
+        return call_user_func_array([$app->getOrm(), $method ], $args);
     }
     /**
      * call method in orm if cant find in this class
