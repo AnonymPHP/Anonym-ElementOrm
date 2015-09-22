@@ -65,23 +65,10 @@ class Model
         if (isset($vars['table'])) {
             return $vars['table'];
         }
-
-        $class = get_called_class();
-        return $this->resolveClassName($class);
     }
 
 
-    /**
-     * resolve the class name
-     *
-     * @param string $name
-     * @return mixed
-     */
-    private function resolveClassName($name = '')
-    {
-        $explodeClass = explode('\\', $name);
-        return end($explodeClass);
-    }
+
 
     /**
      * @return Base
