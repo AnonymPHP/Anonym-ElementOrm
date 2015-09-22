@@ -115,7 +115,7 @@ class Model
 
         $app = new static();
 
-        return call_user_func_array([$app->getOrm(), $method ], $args);
+        return call_user_func_array([$app, $method ], $args);
     }
     /**
      * call method in orm if cant find in this class
