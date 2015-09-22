@@ -10,6 +10,7 @@
 
 namespace Anonym\Components\Element;
 use  Anonym\Components\Database\Base;
+use Anonym\Facades\App;
 
 class Model
 {
