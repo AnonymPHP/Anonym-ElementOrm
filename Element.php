@@ -202,6 +202,16 @@ class Element
     }
 
     /**
+     *
+     *
+     * @param string $table
+     * @return Element
+     */
+    public function table($table){
+        return $this->setTable($table);
+    }
+
+    /**
      * Kullanılacak tabloyu atar
      *
      * @param string $table
